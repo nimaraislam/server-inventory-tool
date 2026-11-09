@@ -31,7 +31,7 @@ def add_server():
         environment = input("Environment(prod/dev/test): ").lower().strip()
     role = input("Role: ").lower().strip()
     valid_status = ["running","stopped"]
-    status = input("Status: ").lower().strip()
+    status = input("Status(running/stopped): ").lower().strip()
     if status not in valid_status:
         status = "unknown"
     last_checked = ""

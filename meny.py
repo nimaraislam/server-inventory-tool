@@ -7,6 +7,6 @@ def show_menu():
     print("5. Check a server")
     print("6. Check all servers")
     print("7. Export report as CSV")
-    print("7. Export report as CSV")
+
     print("8. Exit")
     print("========== ========== ========== ==========")

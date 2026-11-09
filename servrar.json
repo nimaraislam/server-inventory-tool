@@ -1,8 +1,26 @@
-{
-  "name": "abc",
-  "address": "abc",
-  "environment": "prod",
-  "role": "abc",
-  "status": "unknown",
-  "last_checked": ""
-}
+[
+  {
+    "name": "dd",
+    "address": "dd",
+    "environment": "dev",
+    "role": "dd",
+    "status": "unknown",
+    "last_checked": ""
+  },
+  {
+    "name": "bb",
+    "address": "bb",
+    "environment": "prod",
+    "role": "bb",
+    "status": "unknown",
+    "last_checked": ""
+  },
+  {
+    "name": "ff",
+    "address": "ff",
+    "environment": "dev",
+    "role": "ff",
+    "status": "running",
+    "last_checked": ""
+  }
+]
