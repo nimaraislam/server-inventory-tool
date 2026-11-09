@@ -1,0 +1,12 @@
+def show_menu():
+    print("========== Service Status Tool ==========")
+    print("1. Show all servers")
+    print("2. View servers in a specific environment")
+    print("3. Add a server")
+    print("4. Delete a server")
+    print("5. Check a server")
+    print("6. Check all servers")
+    print("7. Export report as CSV")
+    print("7. Export report as CSV")
+    print("8. Exit")
+    print("========== ========== ========== ==========")
