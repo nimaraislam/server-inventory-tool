@@ -1,0 +1,8 @@
+{
+  "name": "abc",
+  "address": "abc",
+  "environment": "prod",
+  "role": "abc",
+  "status": "unknown",
+  "last_checked": ""
+}
