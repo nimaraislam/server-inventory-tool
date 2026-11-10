@@ -1,0 +1,5 @@
+name,address,environment,role,status,last_checked
+ web01 , example.com , prod , webserver , unknown , 
+ db01 , 127.0.0.1 , prod , database ,up,2026-11-10 18:26
+ test01 , 192.0.2.10 , test , testserver , unknown , 
+ dev01 , localhost , dev , developmentserver , unknown , 

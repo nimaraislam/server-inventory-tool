@@ -1,50 +1,38 @@
+from pathlib import Path 
+from datetime import datetime
 import json
-import os
+import csv
 
 def load_data():
-    if not os.path.exists("servrar.json"):
+    DATAFILE = Path("servrar.json")
+    if DATAFILE.exists() is False:
         return []
-    with open("servrar.json", "r", encoding="utf-8") as file:
+    with DATAFILE.open("r", encoding="utf-8") as file:
             servers = json.load(file)
     if not servers:
         return []
     return servers
 
 def save_data(new_server):
-        with open("servrar.json", "w", encoding="utf-8") as file:
-            json.dump(
-                new_server,
-                file,
-                indent=2,
-                ensure_ascii=False
-            )
-
-def add_server():
+    
+    DATAFILE = Path("servrar.json")
+    with DATAFILE.open("w", encoding="utf-8") as file:
+        json.dump(
+            new_server,
+            file,
+            indent=2,
+            ensure_ascii=False
+        )
+    
+def export_report_as_csv():
     servers = load_data()
-    
-    name = input("Server Name: ").lower().strip()
-    address = input("Address: ").lower().strip()
-    env = ["prod","dev","test"]
-    environment = input("Environment(prod/dev/test): ").lower().strip()
-    while environment not in env:
-        print(f"Environment '{environment}' is not valid")
-        environment = input("Environment(prod/dev/test): ").lower().strip()
-    role = input("Role: ").lower().strip()
-    valid_status = ["running","stopped"]
-    status = input("Status(running/stopped): ").lower().strip()
-    if status not in valid_status:
-        status = "unknown"
-    last_checked = ""
-    
-    new_server=  {
-        "name": name ,
-        "address": address ,
-        "environment": environment ,
-        "role": role ,
-        "status": status ,
-        "last_checked": last_checked
-    }
-    servers.append(new_server)
-    save_data(servers)
-    
-    
+    rapporter = Path("rapporter")
+    rapport = rapporter /(f"inventering_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.csv")
+    rapporter.mkdir(exist_ok=True)
+    with open(rapport,"w",newline="", encoding="utf-8") as file:
+        sk = csv.DictWriter(
+                file,
+                fieldnames=["name", "address","environment","role","status","last_checked"]
+        )
+        sk.writeheader()
+        sk.writerows(servers)
