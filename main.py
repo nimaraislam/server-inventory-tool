@@ -1,6 +1,7 @@
 
 from lagring import export_report_as_csv
 from meny import show_menu, add_server, check_a_server_by_name,delete_a_server_by_name,show_all_server,view_servers_in_a_spec_env,check_all_server
+from kontroller import ping_address
 
 def main():
     show_menu()

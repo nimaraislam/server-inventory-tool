@@ -59,6 +59,9 @@ def add_server():
     servers = load_data()
     
     name = input("Server Name: ").lower().strip()
+    while name == "":
+        print("Server name is empty.")
+        name = input("Server Name: ").lower().strip()
     for server in servers:
         if server["name"].lower().strip() == name:
             print("This server name is already existed.Try another one!")

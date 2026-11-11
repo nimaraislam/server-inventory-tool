@@ -1,42 +1,26 @@
 [
   {
-    "name": " web01 ",
-    "address": " example.com ",
-    "environment": " prod ",
-    "role": " webserver ",
+    "name": "web01",
+    "address": "example.com",
+    "environment": "prod",
+    "role": "webserver",
     "status": "up",
-    "last_checked": "2026-11-10 18:33"
+    "last_checked": "2026-11-11 11:07"
   },
   {
-    "name": " db01 ",
-    "address": " 127.0.0.1 ",
-    "environment": " prod ",
-    "role": " database ",
-    "status": "up",
-    "last_checked": "2026-11-10 18:33"
-  },
-  {
-    "name": " test01 ",
-    "address": " 192.0.2.10 ",
-    "environment": " test ",
-    "role": " testserver ",
-    "status": "down",
-    "last_checked": "2026-11-10 18:33"
-  },
-  {
-    "name": " dev01 ",
-    "address": " localhost ",
-    "environment": " dev ",
-    "role": " developmentserver ",
-    "status": "up",
-    "last_checked": "2026-11-10 18:33"
-  },
-  {
-    "name": "db02",
-    "address": "127.0.0.2",
+    "name": "test01",
+    "address": "192.0.2.10",
     "environment": "test",
     "role": "testserver",
+    "status": "down",
+    "last_checked": "2026-11-11 11:07"
+  },
+  {
+    "name": "dev01",
+    "address": "localhost",
+    "environment": "dev",
+    "role": "developmentserver",
     "status": "up",
-    "last_checked": "2026-11-10 18:33"
+    "last_checked": "2026-11-11 11:07"
   }
 ]

@@ -9,6 +9,13 @@ def load_data():
         return []
     with DATAFILE.open("r", encoding="utf-8") as file:
             servers = json.load(file)
+            for server in servers:
+                server["name"] = server["name"].strip()
+                server["address"] = server["address"].strip()
+                server["environment"] = server["environment"].strip()
+                server["role"] = server["role"].strip()
+                server["status"] = server["status"].strip()
+                server["last_checked"] = server["last_checked"].strip()
     if not servers:
         return []
     return servers
